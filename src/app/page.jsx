@@ -9,7 +9,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <section
         id="hero"
-        className="relative pt-32 pb-20 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-900 min-h-screen flex items-center"
+        className="relative pt-32 pb-20 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-900 lg:h-[calc(100vh-30px)] flex items-center"
       >
         {/* Abstract Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
@@ -26,11 +26,11 @@ export default function Home() {
                 Développeur Web à Amiens & Hauts-de-France
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                Je construis le{" "}
+                Développeur web{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-500">
-                  digital
+                  créatif
                 </span>{" "}
-                qui fait grandir votre activité.
+                au service de vos idées
               </h1>
               <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Artisans, commerçants, créateurs : ne laissez pas la technique
@@ -41,10 +41,7 @@ export default function Home() {
                 <Button className="text-lg px-8">
                   <Link href="/services">Voir mes offres</Link>
                 </Button>{" "}
-                <Button
-                  variant="outline"
-                  className="text-slate-300 border-slate-600 hover:border-white hover:text-amber-400"
-                >
+                <Button className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
                   <Link href="/portfolio">Mes réalisations</Link>
                 </Button>
               </div>
@@ -121,10 +118,7 @@ export default function Home() {
               <Link href="/portfolio">Voir mes réalisations</Link>
             </Button>
 
-            <Button
-              variant="outline"
-              className="text-slate-300 border-slate-600 hover:border-white hover:text-amber-400"
-            >
+            <Button className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
               <Link href="/contact">Contactez-moi</Link>
             </Button>
           </div>

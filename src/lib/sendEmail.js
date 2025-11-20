@@ -7,7 +7,7 @@ export async function submitForm(prevState, formData) {
     const nom = formData.get("name");
     const email = formData.get("email");
     const project = formData.get("projectType");
-    const budget = formData.get("budget");
+    const phone = formData.get("phone");
     const message = formData.get("message");
 
     // Vérification de la longueur minimale du message
@@ -23,7 +23,7 @@ export async function submitForm(prevState, formData) {
       from: "contact@lafabriqueducode.fr",
       to: `contact@lafabriqueducode.fr`,
       subject: "Nouveau formulaire de contact",
-      text: `Bonjour Gérald, tu as une nouvelle demande de contact de ${nom}.\n\nVoici son message:\n${message}\n\nTu peux la recontacter à l'adresse suivante: ${email} avec un budget de ${budget} pour un projet de type: ${project}.\n\nCordialement,\nLa Fabrique du code`,
+      text: `Bonjour Gérald, tu as une nouvelle demande de contact de ${nom}.\n\nVoici son message:\n${message}\n\nTu peux la recontacter à l'adresse suivante: ${email} ou au ${phone} pour un projet de type: ${project}.\n\nCordialement,\nLa Fabrique du code`,
     });
     console.log(`Nouvelle demande reçue de ${nom} (${email})`);
 

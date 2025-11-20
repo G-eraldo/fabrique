@@ -86,11 +86,8 @@ export default function Footer() {
             réservés.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white">
+            <Link href="/mentions-legales" className="hover:text-white">
               Mentions Légales
-            </Link>
-            <Link href="#" className="hover:text-white">
-              CGV
             </Link>
           </div>
         </div>

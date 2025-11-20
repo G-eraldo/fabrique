@@ -104,6 +104,21 @@ export default function FormContent() {
               </div>
               <div>
                 <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-slate-700 mb-1"
+                >
+                  Votre numéro de téléphone
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 transition duration-150"
+                  placeholder="Ex: 07 67 26 53 66"
+                  pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2} || [0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2} || [0-9]{2}/[0-9]{2}/[0-9]{2}/[0-9]{2}/[0-9]{2} || [0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}"
+                />
+              </div>
+              <div>
+                <label
                   htmlFor="projectType"
                   className="block text-sm font-medium text-slate-700 mb-1"
                 >
@@ -123,20 +138,7 @@ export default function FormContent() {
                   <option value="autre">Autre / J'ai besoin de conseils</option>
                 </select>
               </div>
-              <div>
-                <label
-                  htmlFor="budget"
-                  className="block text-sm font-medium text-slate-700 mb-1"
-                >
-                  Quel est votre budget estimé ? (Optionnel)
-                </label>
-                <input
-                  type="text"
-                  name="budget"
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 transition duration-150"
-                  placeholder="Ex: 1500€"
-                />
-              </div>
+
               <div>
                 <label
                   htmlFor="message"

@@ -37,45 +37,39 @@ export default function page() {
       id: 1,
       icon: Monitor,
       title: "Site Vitrine",
-      price: "À partir de 1400€",
       description:
         "L'essentiel pour présenter votre activité, rassurer vos prospects et être trouvé sur Google localement. Le site qui travaille pour vous 24h/24.",
       features: [
-        "Design Responsive (Mobile & Tablette)",
+        "Design adapté (Mobile & Tablette)",
         "Optimisation SEO locale (Google Maps)",
         "Formulaire de contact + anti-spam",
         "Formation de prise en main (2h)",
-        "3 mois de support inclus",
       ],
     },
     {
       id: 2,
       icon: ShoppingCart,
       title: "E-Commerce",
-      price: "À partir de 1800€",
       description:
         "Votre boutique en ligne ouverte 24h/24. Une plateforme de vente robuste, sécurisée et facile à gérer pour maximiser vos revenus.",
       features: [
         "Catalogue produits illimité",
         "Paiement sécurisé (Stripe/Paypal)",
         "Gestion des stocks simple",
-        "Dashboard administrateur intuitif",
-        "Formation complète à la vente en ligne",
+        "Tableau de bord administrateur intuitif",
       ],
     },
     {
       id: 3,
       icon: Code,
       title: "Sur Mesure / App Web",
-      price: "Sur Devis",
       description:
         "Pour les projets uniques et complexes : outils métiers personnalisés, plateformes de réservation, ou applications web spécifiques.",
       features: [
-        "Développement React / Next.js / Node",
-        "Architecture évolutive et évolutive",
+        "Architecture évolutive et adaptative",
         "Base de données personnalisée",
         "Espace membre / Authentification",
-        "Maintenance évolutive et monitoring",
+        "Maintenance évolutive",
       ],
     },
   ];

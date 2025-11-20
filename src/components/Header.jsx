@@ -20,12 +20,18 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-3 cursor-pointer">
-          <div className="w-10 h-10 bg-slate-900 rounded flex items-center justify-center text-white">
+          <Link
+            href="/"
+            className="w-10 h-10 bg-slate-900 rounded flex items-center justify-center text-white"
+          >
             <Code size={24} strokeWidth={2.5} />
-          </div>
-          <span className="text-xl font-bold tracking-tight transition-colors">
+          </Link>
+          <Link
+            href="/"
+            className="text-xl font-bold tracking-tight transition-colors"
+          >
             La Fabrique<span className="text-amber-500"> du code</span>
-          </span>
+          </Link>
         </div>
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-8">
