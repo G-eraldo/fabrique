@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Briefcase, Layout, Rocket } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -49,15 +50,20 @@ export default function Home() {
               </div>
             </div>
             {/*Rajouter photo ici  */}
-            {/* <div className="relative hidden lg:block">
-              <div className="relative mx-auto border-slate-800 bg-slate-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="h-[32px] w-[3px] bg-slate-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-                <div className="h-[64px] w-[3px] bg-slate-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-                <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white relative flex items-center justify-center">
-                  <Monitor className="w-16 h-16 text-slate-300" />
+            <div className="relative hidden lg:block">
+              <div className="relative mx-auto rounded-[2.5rem] h-[600px]">
+                <div className="overflow-hidden h-[572px] relative flex items-center justify-center">
+                  <Image
+                    src="/image-de-code.jpg"
+                    alt="Photo description"
+                    width={500}
+                    height={572}
+                    className="object-cover
+                    rounded-2xl"
+                  />
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
