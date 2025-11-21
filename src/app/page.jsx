@@ -25,13 +25,13 @@ export default function Home() {
                 <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 animate-pulse"></span>
                 Développeur Web à Amiens & Hauts-de-France
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+              <strong className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                 Développeur web{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-500">
                   créatif
                 </span>{" "}
                 au service de vos idées
-              </h1>
+              </strong>
               <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Artisans, commerçants, créateurs : ne laissez pas la technique
                 vous ralentir. Je conçois des sites modernes, rapides et vous

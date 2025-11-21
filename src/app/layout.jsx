@@ -99,7 +99,7 @@ export const metadata = {
       "Sites vitrines, e-commerce et applications web sur mesure. Spécialisé en création de sites pour entreprises locales.",
     images: [
       {
-        url: "https://lafabriqueducode.fr/logo.jpg",
+        url: "https://lafabriqueducode.fr/logo.jpeg",
         width: 1200,
         height: 630,
         alt: "La Fabrique du Code - Développement Web",
@@ -115,7 +115,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "La Fabrique du Code - Développement Web Professionnel",
     description: "Sites vitrines, e-commerce et applications web à Amiens",
-    images: ["https://lafabriqueducode.fr/logo.jpg"],
+    images: ["https://lafabriqueducode.fr/logo.jpeg"],
     creator: "@GeraldFrancois",
   },
 
