@@ -146,9 +146,6 @@ export const metadata = {
     ICBM: "49.894067,2.295753",
     "DC.title": "Développement de sites web professionnels Amiens",
   },
-  icons: {
-    icon: "./favicon.ico",
-  },
 };
 
 export default function RootLayout({ children }) {
