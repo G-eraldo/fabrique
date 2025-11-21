@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
-
 import "./globals.css";
 export const viewport = {
   width: "device-width",
@@ -154,6 +154,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col h-full">
         <Header />
         <main className="grow">{children}</main>
+        <Analytics />
         <Footer />
         <Toaster />
       </body>
