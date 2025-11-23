@@ -142,9 +142,8 @@ export const metadata = {
   // =====================================================
   other: {
     "geo.region": "FR-80",
-    "geo.placename": "Amiens",
-    ICBM: "49.894067,2.295753",
-    "DC.title": "Développement de sites web professionnels Amiens",
+    "geo.placename": "Amiens, Somme, Hauts-de-France",
+    "DC.title": "Développement de sites web professionnels Amiens et Somme",
   },
 };
 

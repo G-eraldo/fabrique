@@ -55,7 +55,7 @@ export default function page() {
 
             <p className="pt-4">
               Bonjour, je suis Gérald François, auto-entrepreneur web passionné
-              basé à Amiens (Hauts-de-France).
+              basé à proximité d'Amiens (Hauts-de-France).
             </p>
 
             <p className="pt-4">

@@ -23,7 +23,7 @@ export default function Home() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 text-amber-400 text-sm font-medium mb-6 backdrop-blur-sm">
                 <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 animate-pulse"></span>
-                Développeur Web à Amiens & Hauts-de-France
+                <h1>Développeur Web près d'Amiens & Hauts-de-France</h1>
               </div>
               <strong className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                 Développeur web{" "}
@@ -83,7 +83,7 @@ export default function Home() {
               {
                 icon: Briefcase,
                 title: "Partenariat Local",
-                desc: "Un auto-entrepreneur à Amiens dédié à votre réussite. Un seul contact, zéro jargon technique.",
+                desc: "Un auto-entrepreneur près d'Amiens dédié à votre réussite. Un seul contact, zéro jargon technique.",
               },
             ].map((item, i) => (
               <div

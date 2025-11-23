@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-0.5 text-amber-500" />
-                Amiens, Hauts-de-France
+                Hauts-de-France
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
