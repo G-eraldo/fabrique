@@ -57,6 +57,17 @@ export default function page() {
       linkText: "Voir le projet détaillé",
       href: "https://lambent-parfait-50538f.netlify.app",
     },
+    {
+      id: 3,
+      img: "/site_3.png",
+      title: "Site fiction d'une pizzeria",
+      type: "Site e-commerce",
+      description:
+        "Création d'un site pour une pizzeria. Objectif : faire de ce site, la vitrine de son travail, permettre le click and collect et la livraison.",
+      tags: ["Nuxt.js", "Stripe", "SEO"],
+      linkText: "Voir le projet détaillé",
+      href: "https://pizza-planet-six.vercel.app/",
+    },
   ];
   return (
     <div className="pt-32 pb-20 bg-slate-50">
