@@ -114,7 +114,7 @@ export default function FormContent() {
                   name="phone"
                   className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-amber-500 focus:border-amber-500 transition duration-150"
                   placeholder="Ex: 07 67 26 53 66"
-                  pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2} || [0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2} || [0-9]{2}/[0-9]{2}/[0-9]{2}/[0-9]{2}/[0-9]{2} || [0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}"
+                  pattern="0[1-9]([ .-]?[0-9]{2}){4}"
                 />
               </div>
               <div>

@@ -48,17 +48,6 @@ export default function page() {
     },
     {
       id: 2,
-      img: "/site_2.png",
-      title: "Réplique easyJet",
-      type: "Intégration web Front-End",
-      description:
-        "Reproduire la page d'accueil du site easyJet front-end dans le cadre de ma formation.",
-      tags: ["HTML", "CSS", "Responsive"],
-      linkText: "Voir le projet détaillé",
-      href: "https://lambent-parfait-50538f.netlify.app",
-    },
-    {
-      id: 3,
       img: "/site_3.png",
       title: "Site fiction d'une pizzeria",
       type: "Site e-commerce",
@@ -67,6 +56,17 @@ export default function page() {
       tags: ["Nuxt.js", "Stripe", "SEO"],
       linkText: "Voir le projet détaillé",
       href: "https://pizza-planet-six.vercel.app/",
+    },
+    {
+      id: 3,
+      img: "/site_2.png",
+      title: "Réplique easyJet",
+      type: "Intégration web Front-End",
+      description:
+        "Reproduire la page d'accueil du site easyJet front-end dans le cadre de ma formation.",
+      tags: ["HTML", "CSS", "Responsive"],
+      linkText: "Voir le projet détaillé",
+      href: "https://lambent-parfait-50538f.netlify.app",
     },
   ];
   return (
