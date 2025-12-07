@@ -44,7 +44,7 @@ export default function page() {
         "Création d'un portfolio pour une artiste photographe. Objectif : faire de ce site, la vitrine de son travail.",
       tags: ["Galerie HD", "SEO", "Stripe"],
       linkText: "Voir le projet détaillé",
-      href: "https://les-photos-de-cecile-l7f5.vercel.app/",
+      href: "https://les-photos-de-cecile.vercel.app/",
     },
     {
       id: 2,
