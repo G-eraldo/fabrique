@@ -58,7 +58,18 @@ export default function page() {
       href: "https://pizza-planet-six.vercel.app/",
     },
     {
-      id: 3,
+      id: 4,
+      img: "/site_5.png",
+      title: "Site fiction d'un plombier",
+      type: "Site vitrine",
+      description:
+        "Création d'un site pour un plombier. Objectif : faire de ce site, la vitrine de son travail.",
+      tags: ["Nuxt.js", "SEO"],
+      linkText: "Voir le projet détaillé",
+      href: "https://plumber-site-psi.vercel.app/",
+    },
+    {
+      id: 5,
       img: "/site_1.png",
       title: "Les Photos de Cécile",
       type: "Portfolio Photographe",
@@ -69,7 +80,7 @@ export default function page() {
       href: "https://les-photos-de-cecile.vercel.app/",
     },
     {
-      id: 4,
+      id: 6,
       img: "/site_2.png",
       title: "Réplique easyJet",
       type: "Intégration web Front-End",
