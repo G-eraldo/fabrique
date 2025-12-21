@@ -38,7 +38,7 @@ export default function page() {
     {
       id: 1,
       img: "/site_4.png",
-      title: "Site fiction d'une restaurant",
+      title: "Site fiction d'un restaurant",
       type: "Site vitrine",
       description:
         "Création d'un site pour une restaurant. Objectif : faire de ce site, la vitrine de son travail.",
@@ -107,47 +107,47 @@ export default function page() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Card
+            <Link
               key={project.id}
-              className="group bg-white p-8 rounded-2xl shadow-md hover:shadow-xl border border-slate-100 transition-all duration-300 hover:border-amber-500 relative flex flex-col h-full"
+              href={project.href}
+              target="_blank"
+              className="group block h-full"
             >
-              <div className="h-48 flex items-center justify-center relative overflow-hidden">
-                <Image
-                  src={project.img}
-                  alt={project.title}
-                  width={384}
-                  height={192}
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-slate-800 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4 flex-1">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              <Card className="bg-white p-8 rounded-2xl shadow-md group-hover:shadow-xl border border-slate-100 transition-all duration-300 group-hover:border-amber-500 relative flex flex-col h-full">
+                <div className="h-48 flex items-center justify-center relative overflow-hidden">
+                  <Image
+                    src={project.img}
+                    alt={project.title}
+                    width={384}
+                    height={192}
+                    className="object-cover"
+                  />
                 </div>
-                <button className="mt-4 text-amber-500 font-semibold flex items-center hover:text-amber-600 transition-colors">
-                  <Link
-                    href={project.href}
-                    target="_blank"
-                    className="flex items-center"
-                  >
-                    {project.linkText} <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </button>
-              </div>
-            </Card>
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4 flex-1">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4 text-amber-500 font-semibold flex items-center group-hover:text-amber-600 transition-colors">
+                    <span className="flex items-center">
+                      {project.linkText} <ArrowRight className="ml-2 w-4 h-4" />
+                    </span>
+                  </div>
+                </div>
+              </Card>
+            </Link>
           ))}
         </div>
         <div className="col-span-full text-center mt-8 p-10 bg-slate-300 rounded-2xl">
