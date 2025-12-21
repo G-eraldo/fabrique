@@ -37,14 +37,14 @@ export default function page() {
   const projects = [
     {
       id: 1,
-      img: "/site_1.png",
-      title: "Les Photos de Cécile",
-      type: "Portfolio Photographe",
+      img: "/site_4.png",
+      title: "Site fiction d'une restaurant",
+      type: "Site vitrine",
       description:
-        "Création d'un portfolio pour une artiste photographe. Objectif : faire de ce site, la vitrine de son travail.",
-      tags: ["Galerie HD", "SEO", "Stripe"],
+        "Création d'un site pour une restaurant. Objectif : faire de ce site, la vitrine de son travail.",
+      tags: ["Nuxt.js", "SEO"],
       linkText: "Voir le projet détaillé",
-      href: "https://les-photos-de-cecile.vercel.app/",
+      href: "https://le-bistrot-gourmand.vercel.app/",
     },
     {
       id: 2,
@@ -59,6 +59,17 @@ export default function page() {
     },
     {
       id: 3,
+      img: "/site_1.png",
+      title: "Les Photos de Cécile",
+      type: "Portfolio Photographe",
+      description:
+        "Création d'un portfolio pour une artiste photographe. Objectif : faire de ce site, la vitrine de son travail.",
+      tags: ["Galerie HD", "SEO", "Stripe"],
+      linkText: "Voir le projet détaillé",
+      href: "https://les-photos-de-cecile.vercel.app/",
+    },
+    {
+      id: 4,
       img: "/site_2.png",
       title: "Réplique easyJet",
       type: "Intégration web Front-End",
