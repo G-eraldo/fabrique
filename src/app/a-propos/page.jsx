@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { CheckCircle, Code, Phone } from "lucide-react";
 
 export const metadata = {
@@ -60,7 +61,7 @@ export default function page() {
 
             <p className="pt-4">
               J'ai créé La Fabrique du Code après une formation intensive. Je
-              maîtrise l'écosystème web moderne, notamment : React, Next.js,
+              maîtrise l'écosystème web moderne, notamment : Vue.js, Nuxt.js,
               HTML, CSS, JavaScript et les solutions e-commerce robustes comme
               Stripe.
             </p>
@@ -101,7 +102,7 @@ export default function page() {
                 <div className="flex flex-col items-center text-center p-4">
                   <Code className="w-8 h-8 text-amber-400 mb-3" />
                   <p className="text-3xl font-bold text-slate-800 mb-1">
-                    Next.js
+                    Nuxt.js
                   </p>
                   <p className="text-slate-500 text-sm uppercase tracking-wide">
                     Expertise Tech
