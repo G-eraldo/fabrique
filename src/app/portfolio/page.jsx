@@ -59,6 +59,17 @@ export default function page() {
     },
     {
       id: 4,
+      img: "/site_6.png",
+      title: "Site fiction d'un caviste",
+      type: "Site vitrine",
+      description:
+        "Création d'un site pour un caviste. Objectif : faire de ce site, la vitrine de son travail",
+      tags: ["Nuxt.js", "SEO"],
+      linkText: "Voir le projet détaillé",
+      href: "https://demo-caviste.netlify.app/",
+    },
+    {
+      id: 5,
       img: "/site_5.png",
       title: "Site fiction d'un plombier",
       type: "Site vitrine",
@@ -69,7 +80,7 @@ export default function page() {
       href: "https://plumber-site-psi.vercel.app/",
     },
     {
-      id: 5,
+      id: 6,
       img: "/site_1.png",
       title: "Les Photos de Cécile",
       type: "Portfolio Photographe",
@@ -80,7 +91,7 @@ export default function page() {
       href: "https://les-photos-de-cecile.vercel.app/",
     },
     {
-      id: 6,
+      id: 7,
       img: "/site_2.png",
       title: "Réplique easyJet",
       type: "Intégration web Front-End",
