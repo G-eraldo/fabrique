@@ -36,6 +36,17 @@ export const metadata = {
 export default function page() {
   const projects = [
     {
+      id: 0,
+      img: "/site_sacre_coeur.png",
+      title: "Site Institution du Sacré Cœur",
+      type: "Site vitrine",
+      description:
+        "Création d'un site vitrine pour l'Institution du Sacré Cœur à Breteuil : École, Collège (SEGPA) et Internat.",
+      tags: ["Nuxt.js", "SEO", "Actualités", "Multi-établissements"],
+      linkText: "Voir le projet détaillé",
+      href: "https://www.sacrecoeur-breteuil.fr/",
+    },
+    {
       id: 1,
       img: "/site_4.png",
       title: "Site fiction d'un restaurant",
