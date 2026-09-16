@@ -23,25 +23,26 @@ export default function Home() {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 text-amber-400 text-sm font-medium mb-6 backdrop-blur-sm">
                 <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 animate-pulse"></span>
-                <h1>Développeur Web près d'Amiens & Hauts-de-France</h1>
+                Amiens & Hauts-de-France
               </div>
-              <strong className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                Développeur web{" "}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                Création de sites web pour{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-500">
-                  créatif
+                  TPE et PME
                 </span>{" "}
-                au service de vos idées
-              </strong>
+                à Amiens
+              </h1>
               <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Artisans, commerçants, créateurs : ne laissez pas la technique
-                vous ralentir. Je conçois des sites modernes, rapides et vous
-                forme pour que vous restiez maître de votre outil.
+                J&apos;aide les TPE, PME, artisans et commerçants d&apos;Amiens et
+                des Hauts-de-France à disposer d&apos;un site web clair, rapide et
+                simple à gérer. Site vitrine, boutique en ligne ou outil sur
+                mesure : je vous accompagne jusqu&apos;à la prise en main.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button className="text-lg px-8">
+                <Button asChild className="text-lg px-8">
                   <Link href="/services">Voir mes offres</Link>
-                </Button>{" "}
-                <Button className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
+                </Button>
+                <Button asChild className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
                   <Link href="/portfolio">Mes réalisations</Link>
                 </Button>
               </div>
@@ -49,14 +50,14 @@ export default function Home() {
             {/*Rajouter photo ici  */}
             <div className="relative hidden lg:block">
               <div className="relative mx-auto rounded-[2.5rem] h-[600px]">
-                <div className="overflow-hidden h-[572px] relative flex items-center justify-center">
+                <div className="relative h-[572px] w-full max-w-[500px] overflow-hidden rounded-2xl">
                   <Image
                     src="/image-de-code.jpg"
-                    alt="Photo description"
-                    width={500}
-                    height={572}
-                    className="object-cover
-                    rounded-2xl"
+                    alt="Développeur web au travail"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 500px, 100vw"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -72,13 +73,13 @@ export default function Home() {
             {[
               {
                 icon: Rocket,
-                title: "Livraison Rapide",
-                desc: "Sites fonctionnels généralement livrés sous 2-3 semaines. Votre présence en ligne sans attendre.",
+                title: "Projet cadré",
+                desc: "Un calendrier adapté à votre projet, défini dès le départ selon vos besoins et vos contenus.",
               },
               {
                 icon: Layout,
-                title: "Design Mobile First",
-                desc: "100% Responsive par défaut. Votre site est parfait sur tous les écrans, du mobile au desktop.",
+                title: "Pensé pour tous les écrans",
+                desc: "Une expérience de navigation conçue pour le mobile, la tablette et l'ordinateur.",
               },
               {
                 icon: Briefcase,
@@ -110,15 +111,15 @@ export default function Home() {
             Prêt à propulser votre activité ?
           </h2>
           <p className="text-slate-600 mb-8 text-lg">
-            Découvrez ce que j'ai déjà réalisé ou demandez un devis gratuit en 5
-            minutes.
+            Découvrez des réalisations et démonstrations, ou parlez-moi de
+            votre besoin pour obtenir un devis adapté.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button>
+            <Button asChild>
               <Link href="/portfolio">Voir mes réalisations</Link>
             </Button>
 
-            <Button className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
+            <Button asChild className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
               <Link href="/contact">Contactez-moi</Link>
             </Button>
           </div>

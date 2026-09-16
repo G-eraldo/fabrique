@@ -19,10 +19,10 @@ export const metadata = {
   // Titre et description (affichés dans Google Search)
   title: {
     template: "%s | La Fabrique du Code",
-    default: "La Fabrique du Code - Développement Web Professionnel",
+    default: "Création de sites web pour TPE et PME à Amiens",
   },
   description:
-    "Gérald François - Développeur web spécialisé en sites vitrines, e-commerce et applications web à Amiens. Création de sites professionnels pour entreprises et commerçants.",
+    "Création de sites vitrines, e-commerce et applications web pour TPE, PME, artisans et commerçants à Amiens et dans les Hauts-de-France.",
 
   // =====================================================
   // MOTS-CLÉS
@@ -94,9 +94,9 @@ export const metadata = {
     locale: "fr_FR",
     url: "https://lafabriqueducode.fr",
     siteName: "La Fabrique du Code",
-    title: "La Fabrique du Code - Développement Web Professionnel à Amiens",
+    title: "Création de sites web pour TPE et PME à Amiens",
     description:
-      "Sites vitrines, e-commerce et applications web sur mesure. Spécialisé en création de sites pour entreprises locales.",
+      "Sites vitrines, e-commerce et applications web pour TPE, PME, artisans et commerçants à Amiens et dans les Hauts-de-France.",
     images: [
       {
         url: "https://lafabriqueducode.fr/logo.jpeg",
@@ -113,7 +113,7 @@ export const metadata = {
   // =====================================================
   twitter: {
     card: "summary_large_image",
-    title: "La Fabrique du Code - Développement Web Professionnel",
+    title: "Création de sites web pour TPE et PME à Amiens",
     description: "Sites vitrines, e-commerce et applications web à Amiens",
     images: ["https://lafabriqueducode.fr/logo.jpeg"],
     creator: "@GeraldFrancois",
@@ -150,7 +150,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr" className="h-full">
-      <body className="flex flex-col h-full">
+      <body suppressHydrationWarning className="flex flex-col h-full">
         <Header />
         <main className="grow">{children}</main>
         <Analytics />

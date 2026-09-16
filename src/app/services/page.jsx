@@ -1,13 +1,14 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { CheckCircle, Code, Monitor, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
-  // 1. TITRE UNIQUE (Optimisation Services + Tarifs)
-  title: "Services & Tarifs | Création Sites Web Vitrine, E-commerce à Amiens",
+  title: "Services web pour TPE et PME à Amiens",
 
   // 2. DESCRIPTION CIBLÉE (Optimisation des services clés et de la proposition de valeur)
   description:
-    "Découvrez les tarifs clairs de La Fabrique du Code pour la création de sites vitrines, e-commerce et applications web sur mesure. Expertise locale à Amiens (Hauts-de-France).",
+    "Découvrez les services de La Fabrique du Code : sites vitrines, e-commerce et applications web sur mesure pour TPE et PME à Amiens et dans les Hauts-de-France.",
 
   // 3. URL CANONIQUE SPÉCIFIQUE
   alternates: {
@@ -16,15 +17,13 @@ export const metadata = {
 
   // 4. OPEN GRAPH (Pour les partages sociaux)
   openGraph: {
-    title: "Nos Services de Développement Web avec Tarifs",
+    title: "Services de développement web pour TPE et PME",
     description:
-      "Des solutions sur mesure et professionnelles avec tarifs transparents. SEO, support et formation inclus.",
+      "Des solutions sur mesure pour créer ou faire évoluer votre présence en ligne.",
   },
 
   // 5. MOTS-CLÉS ADDITIONNELS
   keywords: [
-    "tarifs création site web Amiens",
-    "prix site vitrine freelance",
     "devis site e-commerce",
     "développement web sur mesure prix",
     "offre création site web Amiens",
@@ -45,6 +44,7 @@ export default function page() {
         "Formulaire de contact + anti-spam",
         "Formation de prise en main (2h)",
       ],
+      cta: "Demander un devis pour un site vitrine",
     },
     {
       id: 2,
@@ -58,6 +58,7 @@ export default function page() {
         "Gestion des stocks simple",
         "Tableau de bord administrateur intuitif",
       ],
+      cta: "Parler de mon projet e-commerce",
     },
     {
       id: 3,
@@ -71,6 +72,7 @@ export default function page() {
         "Espace membre / Authentification",
         "Maintenance évolutive",
       ],
+      cta: "Échanger sur mon projet sur mesure",
     },
   ];
   return (
@@ -78,11 +80,11 @@ export default function page() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-16 max-w-3xl mx-auto">
           <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">
-            Mes Services & Tarifs <span className="text-amber-500">Clairs</span>
+            Des services web <span className="text-amber-500">adaptés à votre projet</span>
           </h1>
           <p className="text-xl text-slate-600">
-            Des solutions sur-mesure pour chaque besoin professionnel. Chaque
-            projet inclut le SEO, le support et la formation.
+            Site vitrine, e-commerce ou application web : construisons une
+            solution utile à votre activité et à vos clients.
           </p>
         </header>
 
@@ -102,9 +104,6 @@ export default function page() {
               <h3 className="text-2xl font-bold text-slate-800 mb-2">
                 {service.title}
               </h3>
-              <div className="text-amber-600 font-bold text-lg mb-4">
-                {service.price}
-              </div>
               <p className="text-slate-600 mb-6 leading-relaxed flex-1">
                 {service.description}
               </p>
@@ -119,20 +118,23 @@ export default function page() {
                   </li>
                 ))}
               </ul>
+              <Button asChild className="w-full">
+                <Link href="/contact">{service.cta}</Link>
+              </Button>
             </Card>
           ))}
         </div>
 
         <div className="mt-16 text-center bg-white p-8 rounded-xl shadow-inner border border-slate-200">
-          <h3 className="text-2xl font-bold text-slate-800 mb-3">
-            Ce qui est toujours inclus
-          </h3>
+          <h2 className="text-2xl font-bold text-slate-800 mb-3">
+            Un accompagnement clair, du besoin à la mise en ligne
+          </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-slate-600">
             {[
-              "SEO Inclus",
-              "Support 3 Mois",
-              "Hébergement / Nom de Domaine (Option)",
-              "Design sur-mesure",
+              "Référencement adapté au projet",
+              "Formation à la prise en main",
+              "Hébergement et nom de domaine sur demande",
+              "Design sur mesure",
             ].map((item, i) => (
               <div
                 key={i}
@@ -142,6 +144,19 @@ export default function page() {
                 <span>{item}</span>
               </div>
             ))}
+          </div>
+          <p className="mt-5 text-sm text-slate-500 max-w-3xl mx-auto">
+            Le périmètre, le calendrier et les modalités de support sont définis
+            avec vous dans le devis. Ils peuvent évoluer selon les contenus,
+            fonctionnalités et validations nécessaires.
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+            <Button asChild variant="outline">
+              <Link href="/portfolio">Voir des réalisations et démonstrations</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/contact">Demander un devis adapté</Link>
+            </Button>
           </div>
         </div>
       </div>
