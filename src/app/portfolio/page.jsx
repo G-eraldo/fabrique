@@ -47,7 +47,18 @@ export default function page() {
       href: "https://www.sacrecoeur-breteuil.fr/",
     },
     {
-      id: 1,
+      id: 2,
+      img: "/site_1.png",
+      title: "Les Photos de Cécile",
+      type: "Portfolio Photographe",
+      description:
+        "Création d'un portfolio pour une artiste photographe. Objectif : faire de ce site, la vitrine de son travail.",
+      tags: ["Galerie HD", "SEO", "Mollie", "Strapi"],
+      linkText: "Voir le projet détaillé",
+      href: "https://lesphotosdececile.fr",
+    },
+    {
+      id: 3,
       img: "/site_4.png",
       title: "Site fiction d'un restaurant",
       type: "Site vitrine",
@@ -58,7 +69,7 @@ export default function page() {
       href: "https://le-bistrot-gourmand.vercel.app/",
     },
     {
-      id: 2,
+      id: 4,
       img: "/site_3.png",
       title: "Site fiction d'une pizzeria",
       type: "Site e-commerce",
@@ -69,7 +80,7 @@ export default function page() {
       href: "https://pizza-planet-six.vercel.app/",
     },
     {
-      id: 4,
+      id: 5,
       img: "/site_6.png",
       title: "Site fiction d'un caviste",
       type: "Site vitrine",
@@ -80,7 +91,7 @@ export default function page() {
       href: "https://demo-caviste.netlify.app/",
     },
     {
-      id: 5,
+      id: 6,
       img: "/site_5.png",
       title: "Site fiction d'un plombier",
       type: "Site vitrine",
@@ -90,17 +101,7 @@ export default function page() {
       linkText: "Voir le projet détaillé",
       href: "https://plumber-site-psi.vercel.app/",
     },
-    {
-      id: 6,
-      img: "/site_1.png",
-      title: "Les Photos de Cécile",
-      type: "Portfolio Photographe",
-      description:
-        "Création d'un portfolio pour une artiste photographe. Objectif : faire de ce site, la vitrine de son travail.",
-      tags: ["Galerie HD", "SEO", "Stripe"],
-      linkText: "Voir le projet détaillé",
-      href: "https://les-photos-de-cecile.vercel.app/",
-    },
+
     {
       id: 7,
       img: "/site_2.png",
