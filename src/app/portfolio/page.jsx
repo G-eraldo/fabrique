@@ -35,6 +35,18 @@ export const metadata = {
 export default function page() {
   const projects = [
     {
+      id: 1,
+      img: "/site_maison_jla.jpg",
+      title: "Maison JLA",
+      type: "Boutique en ligne",
+      description:
+        "Création d'une boutique en ligne de bijoux fantaisie avec catalogue, panier, paiement sécurisé et livraison.",
+      tags: ["Nuxt.js", "Strapi", "Mollie", "E-commerce"],
+      linkText: "Voir le projet détaillé",
+      href: "https://maisonjla.fr/",
+      category: "client",
+    },
+    {
       id: 0,
       img: "/site_sacre_coeur.png",
       title: "Site Institution du Sacré Cœur",
