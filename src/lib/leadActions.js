@@ -162,7 +162,7 @@ export async function submitLead(_previous, formData) {
           from: "contact@lafabriqueducode.fr",
           to: "contact@lafabriqueducode.fr",
           subject: "Nouvelle demande : " + SERVICE_LABELS[service],
-          text: "Une nouvelle demande est enregistrée dans le mini-CRM. Connectez-vous à /admin pour la consulter.",
+          text: "Une nouvelle demande est enregistrée dans le mini-CRM. Connecte toi à https://lafabriqueducode.fr/admin pour la consulter.",
         });
       } catch {
         /* The lead is already saved; email is a secondary notification. */
