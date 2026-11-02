@@ -51,8 +51,10 @@ export default function Home() {
               La Fabrique du Code · Solutions pour professionnels
             </span>
             <h1 className="display">
-              Développez votre activité.{" "}
-              <span className="text-amber">Automatisez le reste.</span>
+              Un site qui inspire confiance.
+              <span className="text-amber hero-display-line">
+                Du temps pour votre métier.
+              </span>
             </h1>
             <p className="lead">
               Je crée des sites web, des automatisations et des assistants IA
@@ -257,7 +259,7 @@ export default function Home() {
             eyebrow="Projets publiés"
             title="Des réalisations que vous pouvez parcourir."
           >
-            Deux sites clients accessibles en ligne. Les exemples
+            Des sites clients accessibles en ligne. Les exemples
             d'automatisation présentés ailleurs sur ce site sont identifiés
             comme des démonstrations illustratives.
           </SectionIntro>
@@ -265,7 +267,7 @@ export default function Home() {
             <article className="work-card">
               <div className="work-image">
                 <Image
-                  src="/site_sacre_coeur.png"
+                  src="https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636417/site_sacre_coeur_wflhdg.jpg"
                   alt="Capture du site de l'Institution du Sacré-Cœur de Breteuil"
                   fill
                   sizes="(max-width: 800px) 100vw, 50vw"
@@ -291,7 +293,7 @@ export default function Home() {
             <article className="work-card">
               <div className="work-image">
                 <Image
-                  src="/site_1.png"
+                  src="https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636416/site_1_i64sv4.jpg"
                   alt="Capture du site Les Photos de Cécile"
                   fill
                   sizes="(max-width: 800px) 100vw, 50vw"

@@ -1,7 +1,7 @@
 "use server";
 
 import { SERVICE_LABELS } from "@/lib/site";
-import { createSupabaseServiceClient } from "@/lib/supabase/service";
+import { storeLead } from "@/lib/supabase/leadStorage";
 import { headers } from "next/headers";
 import { createHmac } from "node:crypto";
 
@@ -123,24 +123,27 @@ export async function submitLead(_previous, formData) {
       requestHeaders.get("x-forwarded-for") ||
       "unknown";
     const ip = rawIp.split(",")[0].trim().slice(0, 100);
-    const secret = process.env.SUPABASE_SECRET_KEY;
-    if (!secret) throw new Error("Missing server configuration");
-    const fingerprint = createHmac("sha256", secret).update(ip).digest("hex");
-    const supabase = createSupabaseServiceClient();
-    const { error } = await supabase.rpc("fabrique_submit_lead", {
-      p_submission_id: submissionId,
-      p_name: name,
-      p_company: company,
-      p_email: email,
-      p_phone: phone,
-      p_activity: activity,
-      p_service: service,
-      p_source: source,
-      p_message: message,
-      p_answers: answers,
-      p_fingerprint: fingerprint,
-    });
-    if (error) {
+    const credential =
+      process.env.SUPABASE_DATABASE_URL || process.env.SUPABASE_SECRET_KEY;
+    if (!credential) throw new Error("Missing server configuration");
+    const fingerprint = createHmac("sha256", credential)
+      .update(ip)
+      .digest("hex");
+    try {
+      await storeLead({
+        p_submission_id: submissionId,
+        p_name: name,
+        p_company: company,
+        p_email: email,
+        p_phone: phone,
+        p_activity: activity,
+        p_service: service,
+        p_source: source,
+        p_message: message,
+        p_answers: answers,
+        p_fingerprint: fingerprint,
+      });
+    } catch (error) {
       if (error.message?.includes("rate_limited"))
         return {
           success: false,

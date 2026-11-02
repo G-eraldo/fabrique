@@ -1,8 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
+import { getSupabasePublicConfig } from "@/lib/supabase/publicConfig";
 import "server-only";
 
 export function createSupabaseServiceClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const { url } = getSupabasePublicConfig();
   const secret = process.env.SUPABASE_SECRET_KEY;
   if (!url || !secret)
     throw new Error("Supabase service configuration missing");

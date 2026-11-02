@@ -15,15 +15,25 @@ const clients = [
     title: "Institution du Sacré-Cœur",
     description:
       "Un site publié pour présenter les différents pôles de l'établissement de Breteuil.",
-    image: "/site_sacre_coeur.png",
+    image:
+      "https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636417/site_sacre_coeur_wflhdg.jpg",
     url: "https://www.sacrecoeur-breteuil.fr/",
   },
   {
     title: "Les Photos de Cécile",
     description:
       "Une vitrine et un portfolio pour découvrir le travail d'une photographe professionnelle.",
-    image: "/site_1.png",
+    image:
+      "https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636416/site_1_i64sv4.jpg",
     url: "https://lesphotosdececile.fr/",
+  },
+  {
+    title: "Maison JLA",
+    description:
+      "Un site pour présenter des bijoux fantaisie et proposer un parcours d'achat en ligne.",
+    image:
+      "https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636416/site_maison_jla_a0p4hr.jpg",
+    url: "https://maisonjla.fr/",
   },
 ];
 const demos = [
@@ -31,13 +41,15 @@ const demos = [
     title: "Restaurant",
     description:
       "Concept de page d'accueil pour présenter une carte, les informations pratiques et les moyens de contact.",
-    image: "/site_4.png",
+    image:
+      "https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636417/site_4_latymw.jpg",
   },
   {
     title: "Pizzeria",
     description:
       "Concept de parcours web pour mettre en avant les produits et les options de commande d'une pizzeria.",
-    image: "/site_3.png",
+    image:
+      "https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636417/site_3_dffpzj.png",
   },
 ];
 
@@ -81,9 +93,9 @@ export default function RealisationsPage() {
         title="Du travail réel, et des idées clairement identifiées."
         compact
       >
-        Les projets clients ci-dessous sont accessibles en ligne. Les concepts
-        servent uniquement à illustrer des directions possibles ; ils ne
-        représentent pas des résultats clients.
+        Ces projets clients illustrent des sites réalisés. Les concepts servent
+        uniquement à montrer des directions possibles ; ils ne représentent pas
+        des résultats clients.
       </PageHero>
       <section className="section-tight section-white">
         <div className="container">
@@ -91,7 +103,8 @@ export default function RealisationsPage() {
             eyebrow="Projets clients"
             title="Des sites que vous pouvez visiter."
           >
-            Ces réalisations sont publiées et créditent La Fabrique du Code.
+            Trois projets présentés par La Fabrique du Code, avec leurs liens et
+            leurs captures.
           </SectionIntro>
           <div className="work-grid">
             {clients.map((item) => (

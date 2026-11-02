@@ -47,7 +47,7 @@ Les pages Amiens et Somme ont des contenus distincts. Aucune page Picardie ou Ha
 | Mois | Travail | Preuve attendue |
 | --- | --- | --- |
 | 1 | Publier les pages piliers et les quatre guides de départ ; relire les exemples et CTA ; connecter Search Console. | URL indexables, canoniques correctes, premières données réelles. |
-| 2 | Enrichir les deux réalisations vérifiées avec périmètre et autorisation ; documenter une démonstration n8n supplémentaire ; compléter les questions fréquentes à partir des demandes reçues. | Preuves publiables et questions fondées sur les échanges. |
+| 2 | Enrichir les trois réalisations présentées avec périmètre et autorisation ; documenter une démonstration n8n supplémentaire ; compléter les questions fréquentes à partir des demandes reçues. | Preuves publiables et questions fondées sur les échanges. |
 | 3 | Étudier les requêtes et pages d'entrée dans Search Console ; créer une page métier ou régionale seulement si un besoin distinct et une preuve éditoriale existent ; ajuster les liens internes. | Décisions fondées sur impressions, clics et demandes qualifiées. |
 
 ## Mesure après publication

@@ -124,22 +124,22 @@ export default function CreationSiteWebPage() {
           <div className="work-card">
             <div className="work-image">
               <Image
-                src="/site_sacre_coeur.png"
-                alt="Capture du site de l'Institution du Sacré-Cœur de Breteuil"
+                src="https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636416/site_1_i64sv4.jpg"
+                alt="Capture du site Les Photos de Cécile"
                 fill
                 sizes="(max-width: 800px) 100vw, 50vw"
               />
             </div>
             <div className="work-body">
               <span className="badge">Projet client réalisé</span>
-              <h3>Institution du Sacré-Cœur</h3>
+              <h3>Les Photos de Cécile</h3>
               <p>
-                Un exemple de site publié pour une organisation avec plusieurs
-                pôles d'activité.
+                Un site vitrine et portfolio pour présenter le travail d'une
+                photographe professionnelle.
               </p>
               <a
                 className="inline-link"
-                href="https://www.sacrecoeur-breteuil.fr/"
+                href="https://lesphotosdececile.fr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
