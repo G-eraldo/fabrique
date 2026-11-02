@@ -116,6 +116,7 @@ export async function submitLead(_previous, formData) {
   )
     return genericError;
 
+  let failureStage = "configuration";
   try {
     const requestHeaders = await headers();
     const rawIp =
@@ -129,6 +130,7 @@ export async function submitLead(_previous, formData) {
     const fingerprint = createHmac("sha256", credential)
       .update(ip)
       .digest("hex");
+    failureStage = "database";
     try {
       await storeLead({
         p_submission_id: submissionId,
@@ -150,7 +152,7 @@ export async function submitLead(_previous, formData) {
           message:
             "Trop de demandes ont été envoyées. Réessayez dans un moment ou contactez-moi par e-mail.",
         };
-      throw new Error("Database insertion failed");
+      throw error;
     }
     if (process.env.RESEND_API_KEY) {
       try {
@@ -171,7 +173,17 @@ export async function submitLead(_previous, formData) {
       message:
         "Merci ! Votre demande est enregistrée. Je vous recontacte selon mes disponibilités.",
     };
-  } catch {
+  } catch (error) {
+    console.error("[fabrique.lead] submission failed", {
+      stage: failureStage,
+      code: typeof error?.code === "string" ? error.code : "UNCLASSIFIED",
+      reason:
+        error?.message === "Missing server configuration"
+          ? "MISSING_SERVER_CREDENTIAL"
+          : error?.message === "Invalid database configuration"
+            ? "INVALID_DATABASE_URL"
+            : undefined,
+    });
     return {
       success: false,
       message:

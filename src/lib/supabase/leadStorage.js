@@ -1,4 +1,5 @@
 import { createSupabaseServiceClient } from "@/lib/supabase/service";
+import { SUPABASE_CA } from "@/lib/supabase/supabaseCa";
 import pg from "pg";
 import "server-only";
 
@@ -24,8 +25,8 @@ function databaseConnectionString() {
     (sslmode && !["require", "verify-ca", "verify-full"].includes(sslmode))
   )
     throw new Error("Invalid database configuration");
-  if (!parsed.searchParams.has("sslmode"))
-    parsed.searchParams.set("sslmode", "require");
+  // pg's connection-string SSL options override the explicit CA configuration.
+  parsed.searchParams.delete("sslmode");
   return parsed.toString();
 }
 
@@ -35,6 +36,7 @@ export async function storeLead(lead) {
     const client = new pg.Client({
       connectionString,
       connectionTimeoutMillis: 10000,
+      ssl: { ca: SUPABASE_CA, rejectUnauthorized: true },
     });
     try {
       await client.connect();

@@ -26,4 +26,4 @@ Les avis Supabase ne signalent aucun problème de sécurité critique sur les ta
 
 ## Limites connues
 
-Sans URL PostgreSQL ni clé secrète configurée, le formulaire affiche une erreur de service et propose le contact direct par e-mail ; aucune donnée n'est perdue dans la base. L'interface administrateur utilise l'URL API et la clé publique configurées dans le code ; son authentification avec le mot de passe du propriétaire reste à confirmer. Aucun déploiement de production et aucune infrastructure Hermes/n8n client n'ont été effectués.
+Sans URL PostgreSQL ni clé secrète configurée, le formulaire affiche une erreur de service et propose le contact direct par e-mail ; aucune donnée n'est perdue dans la base. Une URL PostgreSQL locale est maintenant présente. La connexion avec certificat racine vérifié a réussi en lecture seule ; l'envoi complet reste à confirmer après redéploiement de cette correction. L'interface administrateur utilise l'URL API et la clé publique configurées dans le code ; son authentification avec le mot de passe du propriétaire reste à confirmer. Aucun déploiement de production et aucune infrastructure Hermes/n8n client n'ont été effectués.
