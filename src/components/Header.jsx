@@ -1,77 +1,95 @@
 "use client";
 
-import { Code, Menu, XIcon } from "lucide-react";
+import { Code2, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Button } from "./ui/button";
+
+const links = [
+  { label: "Solutions", href: "/services" },
+  { label: "Réalisations", href: "/realisations" },
+  { label: "Guides", href: "/guides" },
+  { label: "À propos", href: "/a-propos" },
+];
+const mobileExtra = [
+  { label: "Création de sites web", href: "/creation-site-web" },
+  { label: "Automatisations n8n", href: "/automatisations" },
+  { label: "Assistants IA Hermes", href: "/agents-ia/hermes" },
+  { label: "Diagnostic IA gratuit", href: "/diagnostic-ia" },
+];
 
 export default function Header() {
-  const navItems = [
-    { name: "Accueil", page: "/" },
-    { name: "Services", page: "/services" },
-    { name: "Réalisations", page: "/portfolio" },
-    { name: "À Propos", page: "/a-propos" },
-  ];
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openAtPath, setOpenAtPath] = useState(null);
+  const pathname = usePathname();
+  const open = openAtPath === pathname;
 
   return (
-    <nav className="fixed w-full z-50 transition-all duration-300 bg-[#F8FAFC] backdrop-blur-md shadow-md py-3">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center space-x-3 cursor-pointer">
+    <header className="site-header">
+      <div className="container">
+        <div className="site-header-inner">
           <Link
             href="/"
-            className="w-10 h-10 bg-slate-900 rounded flex items-center justify-center text-white"
+            className="brand"
+            aria-label="La Fabrique du Code, accueil"
           >
-            <Code size={24} strokeWidth={2.5} />
+            <span className="brand-mark">
+              <Code2 size={23} strokeWidth={2.3} aria-hidden="true" />
+            </span>
+            <span className="brand-label">
+              <span>La Fabrique</span>
+              <span>du Code</span>
+            </span>
           </Link>
-          <Link
-            href="/"
-            className="text-xl font-bold tracking-tight transition-colors"
-          >
-            La Fabrique<span className="text-amber-500"> du code</span>
-          </Link>
-        </div>
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link
-              href={item.page}
-              key={item.page}
-              className="text-sm font-medium hover:text-amber-500 transition-colors"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Button>
-            <Link href="/contact">Demander un devis</Link>
-          </Button>
-        </div>
-        {/* Mobile Toggle */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 rounded-md"
-          >
-            {isMenuOpen ? <XIcon /> : <Menu />}
-          </button>
-        </div>
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t border-slate-100 py-4 px-4 flex flex-col space-y-4">
-            {[...navItems, { name: "Contact", page: "contact" }].map((item) => (
+          <nav className="desktop-nav" aria-label="Navigation principale">
+            {links.map((link) => (
               <Link
-                href={item.page}
-                key={item.page}
-                className="text-sm font-medium hover:text-amber-500 transition-colors"
+                key={link.href}
+                href={link.href}
+                className="nav-link"
+                aria-current={pathname === link.href ? "page" : undefined}
               >
-                {item.name}
+                {link.label}
               </Link>
             ))}
-          </div>
+            <Link className="btn btn-dark" href="/contact?source=entete">
+              Parler de mon projet
+            </Link>
+          </nav>
+          <button
+            type="button"
+            className="mobile-toggle"
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            onClick={() => setOpenAtPath(open ? null : pathname)}
+          >
+            {open ? <X size={21} /> : <Menu size={21} />}
+          </button>
+        </div>
+        {open && (
+          <nav
+            id="mobile-navigation"
+            className="mobile-nav"
+            aria-label="Navigation mobile"
+          >
+            {[...links, ...mobileExtra].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpenAtPath(null)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact?source=menu-mobile"
+              onClick={() => setOpenAtPath(null)}
+            >
+              Parler de mon projet →
+            </Link>
+          </nav>
         )}
       </div>
-    </nav>
+    </header>
   );
 }

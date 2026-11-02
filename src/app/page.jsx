@@ -1,64 +1,207 @@
-import { Button } from "@/components/ui/button";
-import { Briefcase, Layout, Rocket } from "lucide-react";
+/* eslint-disable react/no-unescaped-entities */
+import {
+  ActionLink,
+  CTABand,
+  FAQ,
+  OfferGrid,
+  SectionIntro,
+} from "@/components/Marketing";
+import { contactHref, SITE_URL } from "@/lib/site";
+import {
+  ArrowUpRight,
+  CheckCircle2,
+  CircleDot,
+  Code2,
+  GitBranch,
+  Layers3,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata = { alternates: { canonical: SITE_URL } };
+
+const faq = [
+  [
+    "Par quoi commencer si je ne sais pas quelle solution choisir ?",
+    "Le diagnostic IA gratuit permet de clarifier vos tâches et vos outils. Pour un projet de site web déjà identifié, vous pouvez aussi m'en parler directement.",
+  ],
+  [
+    "Travaillez-vous seulement dans la Somme ?",
+    "Je prospecte dans la Somme, à Amiens et en Hauts-de-France, et j'accompagne aussi des professionnels partout en France à distance.",
+  ],
+  [
+    "Y a-t-il un tarif fixe ?",
+    "Non. Je définis le périmètre, l'hébergement, les éventuelles API et la maintenance avec vous, puis je prépare un devis personnalisé.",
+  ],
+  [
+    "L'IA peut-elle tout faire à ma place ?",
+    "Un assistant peut préparer, classer ou proposer. Les actions sensibles restent soumises à votre validation et les accès sont limités au nécessaire.",
+  ],
+];
 
 export default function Home() {
   return (
     <>
-      {/* HERO SECTION */}
-      <section
-        id="hero"
-        className="relative pt-32 pb-20 lg:pt-32 lg:pb-24 overflow-hidden bg-slate-900 lg:h-[calc(100vh-30px)] flex items-center"
-      >
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-          <div className="absolute top-48 left-24 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-24 right-1/3 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 text-amber-400 text-sm font-medium mb-6 backdrop-blur-sm">
-                <span className="w-2 h-2 bg-amber-500 rounded-full mr-2 animate-pulse"></span>
-                Amiens & Hauts-de-France
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                Création de sites web pour{" "}
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-500">
-                  TPE et PME
-                </span>{" "}
-                à Amiens
-              </h1>
-              <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                J&apos;aide les TPE, PME, artisans et commerçants d&apos;Amiens et
-                des Hauts-de-France à disposer d&apos;un site web clair, rapide et
-                simple à gérer. Site vitrine, boutique en ligne ou outil sur
-                mesure : je vous accompagne jusqu&apos;à la prise en main.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild className="text-lg px-8">
-                  <Link href="/services">Voir mes offres</Link>
-                </Button>
-                <Button asChild className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
-                  <Link href="/portfolio">Mes réalisations</Link>
-                </Button>
-              </div>
+      <section className="hero">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <span className="eyebrow">
+              La Fabrique du Code · Solutions pour professionnels
+            </span>
+            <h1 className="display">
+              Développez votre activité.{" "}
+              <span className="text-amber">Automatisez le reste.</span>
+            </h1>
+            <p className="lead">
+              Je crée des sites web, des automatisations et des assistants IA
+              adaptés à votre entreprise, de la conception à l'accompagnement.
+            </p>
+            <div className="btn-row">
+              <ActionLink href={contactHref("diagnostic-ia", "accueil-hero")}>
+                Diagnostic IA gratuit
+              </ActionLink>
+              <ActionLink
+                href={contactHref("", "accueil-hero")}
+                variant="outline"
+              >
+                Parler de mon projet
+              </ActionLink>
             </div>
-            {/*Rajouter photo ici  */}
-            <div className="relative hidden lg:block">
-              <div className="relative mx-auto rounded-[2.5rem] h-[600px]">
-                <div className="relative h-[572px] w-full max-w-[500px] overflow-hidden rounded-2xl">
-                  <Image
-                    src="/image-de-code.jpg"
-                    alt="Développeur web au travail"
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 500px, 100vw"
-                    className="object-cover"
-                  />
+            <p className="hero-note">
+              <strong>Un interlocuteur unique.</strong> Pour les indépendants,
+              artisans, commerces, restaurants et PME.
+            </p>
+          </div>
+          <div
+            className="hero-art"
+            aria-label="Un site web, une automatisation et un assistant IA reliés à votre activité"
+          >
+            <div className="art-top">
+              <span>Votre activité, mieux reliée</span>
+              <span className="art-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+            </div>
+            <p className="art-title">
+              Des outils qui avancent
+              <br />
+              dans le même sens.
+            </p>
+            <div className="flow-line" aria-hidden="true" />
+            <div className="flow-card">
+              <span className="flow-icon">
+                <Code2 size={22} aria-hidden="true" />
+              </span>
+              <span>
+                <small>Présence</small>
+                <strong>Un site qui vous ressemble</strong>
+              </span>
+            </div>
+            <div className="flow-card">
+              <span className="flow-icon">
+                <GitBranch size={22} aria-hidden="true" />
+              </span>
+              <span>
+                <small>Organisation</small>
+                <strong>Moins de tâches répétitives</strong>
+              </span>
+            </div>
+            <div className="flow-card">
+              <span className="flow-icon">
+                <Sparkles size={22} aria-hidden="true" />
+              </span>
+              <span>
+                <small>Assistance</small>
+                <strong>Une IA sous votre contrôle</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="trust-strip">
+        <div className="container trust-grid">
+          <div className="trust-item">
+            <CircleDot size={19} aria-hidden="true" />
+            Un seul interlocuteur, du cadrage à la prise en main
+          </div>
+          <div className="trust-item">
+            <ShieldCheck size={19} aria-hidden="true" />
+            Des solutions cadrées, testées et documentées
+          </div>
+          <div className="trust-item">
+            <Layers3 size={19} aria-hidden="true" />
+            Somme, Hauts-de-France et France entière
+          </div>
+        </div>
+      </div>
+
+      <section className="section" id="solutions">
+        <div className="container">
+          <SectionIntro
+            eyebrow="Ce que je peux construire"
+            title="Quatre façons de faire avancer votre activité."
+          >
+            Un besoin précis ou simplement une idée à explorer : chaque solution
+            commence par votre réalité, vos outils et vos priorités.
+          </SectionIntro>
+          <OfferGrid />
+        </div>
+      </section>
+
+      <section className="section section-white">
+        <div className="container split">
+          <div>
+            <span className="eyebrow">Le bon point de départ</span>
+            <h2 className="h2" style={{ margin: "1rem 0" }}>
+              Le numérique doit vous simplifier la journée.
+            </h2>
+            <p className="lead">
+              Un formulaire qui se perd, des copier-coller entre outils, un site
+              qui n'explique plus votre activité : ces frictions coûtent de
+              l'attention. Je cherche une solution utile avant de choisir la
+              technologie.
+            </p>
+            <div className="btn-row" style={{ marginTop: "1.7rem" }}>
+              <ActionLink href="/services" variant="dark">
+                Explorer les solutions
+              </ActionLink>
+            </div>
+          </div>
+          <div className="benefit-panel">
+            <div className="benefit-list">
+              <div className="benefit-item">
+                <CheckCircle2 size={22} />
+                <div>
+                  <strong>Être trouvé et compris</strong>
+                  <p>
+                    Un site lisible, rapide et adapté aux personnes que vous
+                    voulez toucher.
+                  </p>
+                </div>
+              </div>
+              <div className="benefit-item">
+                <CheckCircle2 size={22} />
+                <div>
+                  <strong>Retrouver du temps</strong>
+                  <p>
+                    Des workflows n8n pour organiser les tâches répétitives
+                    après vérification de vos outils.
+                  </p>
+                </div>
+              </div>
+              <div className="benefit-item">
+                <CheckCircle2 size={22} />
+                <div>
+                  <strong>Garder la main</strong>
+                  <p>
+                    Des assistants IA avec des permissions limitées et des
+                    validations humaines pour les actions sensibles.
+                  </p>
                 </div>
               </div>
             </div>
@@ -66,63 +209,135 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section Avantages (Quick Highlights from Services/About) */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="section section-dark">
+        <div className="container">
+          <SectionIntro
+            eyebrow="Ma méthode"
+            title="Une démarche claire, de la première discussion à la prise en main."
+          >
+            Je reste votre interlocuteur tout au long du projet. Le périmètre et
+            les responsabilités sont définis avant la réalisation.
+          </SectionIntro>
+          <div className="steps">
             {[
-              {
-                icon: Rocket,
-                title: "Projet cadré",
-                desc: "Un calendrier adapté à votre projet, défini dès le départ selon vos besoins et vos contenus.",
-              },
-              {
-                icon: Layout,
-                title: "Pensé pour tous les écrans",
-                desc: "Une expérience de navigation conçue pour le mobile, la tablette et l'ordinateur.",
-              },
-              {
-                icon: Briefcase,
-                title: "Partenariat Local",
-                desc: "Un auto-entrepreneur près d'Amiens dédié à votre réussite. Un seul contact, zéro jargon technique.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="text-center p-6 rounded-2xl hover:bg-slate-50 transition-colors duration-300 border border-transparent hover:border-amber-100"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-100 text-amber-600 mb-6">
-                  <item.icon size={32} />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
-              </div>
+              [
+                "01 / ÉCOUTER",
+                "Comprendre",
+                "Votre activité, vos objectifs, les outils existants et vos contraintes.",
+              ],
+              [
+                "02 / CADRER",
+                "Proposer",
+                "Une solution faisable, un périmètre précis et un devis adapté.",
+              ],
+              [
+                "03 / CONSTRUIRE",
+                "Réaliser",
+                "Développement, configuration, tests et ajustements prévus ensemble.",
+              ],
+              [
+                "04 / TRANSMETTRE",
+                "Accompagner",
+                "Mise en ligne ou livraison, documentation et prise en main.",
+              ],
+            ].map(([number, title, text]) => (
+              <article className="step" key={number}>
+                <span className="step-num">{number}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA to Portfolio/Contact */}
-      <section className="py-16 bg-slate-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-800 mb-4">
-            Prêt à propulser votre activité ?
-          </h2>
-          <p className="text-slate-600 mb-8 text-lg">
-            Découvrez des réalisations et démonstrations, ou parlez-moi de
-            votre besoin pour obtenir un devis adapté.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild>
-              <Link href="/portfolio">Voir mes réalisations</Link>
-            </Button>
-
-            <Button asChild className="bg-slate-800 hover:bg-slate-700 text-white shadow-lg hover:shadow-slate-800/30 focus:ring-slate-800">
-              <Link href="/contact">Contactez-moi</Link>
-            </Button>
+      <section className="section">
+        <div className="container">
+          <SectionIntro
+            eyebrow="Projets publiés"
+            title="Des réalisations que vous pouvez parcourir."
+          >
+            Deux sites clients accessibles en ligne. Les exemples
+            d'automatisation présentés ailleurs sur ce site sont identifiés
+            comme des démonstrations illustratives.
+          </SectionIntro>
+          <div className="work-grid">
+            <article className="work-card">
+              <div className="work-image">
+                <Image
+                  src="/site_sacre_coeur.png"
+                  alt="Capture du site de l'Institution du Sacré-Cœur de Breteuil"
+                  fill
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                />
+              </div>
+              <div className="work-body">
+                <span className="badge">Projet client réalisé</span>
+                <h3>Institution du Sacré-Cœur</h3>
+                <p>
+                  Un site pour présenter l'école, le collège, la SEGPA et
+                  l'internat de Breteuil.
+                </p>
+                <a
+                  className="inline-link"
+                  href="https://www.sacrecoeur-breteuil.fr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir le site <ArrowUpRight size={17} />
+                </a>
+              </div>
+            </article>
+            <article className="work-card">
+              <div className="work-image">
+                <Image
+                  src="/site_1.png"
+                  alt="Capture du site Les Photos de Cécile"
+                  fill
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                />
+              </div>
+              <div className="work-body">
+                <span className="badge">Projet client réalisé</span>
+                <h3>Les Photos de Cécile</h3>
+                <p>
+                  Une vitrine et un portfolio pour découvrir l'univers d'une
+                  photographe professionnelle.
+                </p>
+                <a
+                  className="inline-link"
+                  href="https://lesphotosdececile.fr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir le site <ArrowUpRight size={17} />
+                </a>
+              </div>
+            </article>
           </div>
+          <div style={{ marginTop: "1.5rem" }}>
+            <Link className="inline-link" href="/realisations">
+              Toutes les réalisations et démonstrations{" "}
+              <ArrowUpRight size={17} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight section-white">
+        <div className="container">
+          <SectionIntro
+            eyebrow="Questions fréquentes"
+            title="Avant de commencer."
+          >
+            Quelques réponses pour choisir le bon premier échange.
+          </SectionIntro>
+          <FAQ items={faq} />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <CTABand source="accueil-bas" />
         </div>
       </section>
     </>

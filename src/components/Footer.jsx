@@ -1,95 +1,63 @@
-import { Code, MapPin } from "lucide-react";
+import { Code2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4 text-white">
-              <Code size={24} />
-              <span className="text-xl font-bold">
-                La Fabrique<span className="text-amber-500"> du code</span>
+    <footer className="site-footer">
+      <div className="container">
+        <div className="footer-grid">
+          <div>
+            <Link
+              href="/"
+              className="brand"
+              aria-label="La Fabrique du Code, accueil"
+            >
+              <span className="brand-mark">
+                <Code2 size={23} aria-hidden="true" />
               </span>
-            </div>
-            <p className="text-sm max-w-xs mb-6">
-              Développement web artisanal et professionnel pour les entreprises
-              des Hauts-de-France.
+              <span className="brand-label">
+                <span>La Fabrique</span>
+                <span>du Code</span>
+              </span>
+            </Link>
+            <p>
+              Sites web, automatisations et assistants IA conçus pour les
+              professionnels. Un interlocuteur unique, de la première idée à la
+              prise en main.
             </p>
           </div>
-
-          <div>
-            <h4 className="text-white font-bold mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-amber-500 transition-colors"
-                >
-                  Accueil
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-amber-500 transition-colors"
-                >
-                  Services & Tarifs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/portfolio"
-                  className="hover:text-amber-500 transition-colors"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/a-propos"
-                  className="hover:text-amber-500 transition-colors"
-                >
-                  À Propos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-amber-500 transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          <div className="footer-col">
+            <h2>Solutions</h2>
+            <Link href="/creation-site-web">Sites web</Link>
+            <Link href="/automatisations">Automatisations n8n</Link>
+            <Link href="/agents-ia/hermes">Assistants IA Hermes</Link>
+            <Link href="/diagnostic-ia">Diagnostic IA gratuit</Link>
           </div>
-
-          <div>
-            <h4 className="text-white font-bold mb-4">Infos Contact</h4>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start">
-                <MapPin size={16} className="mr-2 mt-0.5 text-amber-500" />
-                Hauts-de-France
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
-                Disponible pour nouveaux projets
-              </li>
-            </ul>
+          <div className="footer-col">
+            <h2>Explorer</h2>
+            <Link href="/realisations">Réalisations</Link>
+            <Link href="/solutions-metiers">Solutions par métier</Link>
+            <Link href="/guides">Guides</Link>
+            <Link href="/a-propos">À propos</Link>
+          </div>
+          <div className="footer-col">
+            <h2>Contact</h2>
+            <Link href="/contact">Parler de mon projet</Link>
+            <a href="mailto:contact@lafabriqueducode.fr">
+              contact@lafabriqueducode.fr
+            </a>
+            <a href="tel:+33767265366">07 67 26 53 66</a>
+            <span>Somme · Hauts-de-France · France</span>
           </div>
         </div>
-
-        <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-          <p>
-            &copy; 2025 La Fabrique du Code - Gérald François. Tous droits
-            réservés.
-          </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/mentions-legales" className="hover:text-white">
-              Mentions Légales
-            </Link>
-          </div>
+        <div className="footer-bottom">
+          <span>
+            © {new Date().getFullYear()} La Fabrique du Code · Gérald François
+          </span>
+          <span>
+            <Link href="/mentions-legales">Mentions légales</Link> ·{" "}
+            <Link href="/confidentialite">Confidentialité</Link>
+          </span>
         </div>
       </div>
     </footer>
