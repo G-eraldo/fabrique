@@ -53,7 +53,9 @@ export default function Home() {
             <h1 className="display">
               Un site qui inspire confiance.
               <br />
-              <span className="text-amber">Du temps pour votre métier.</span>
+              <span className="text-amber">
+                Une IA qui vous fait gagner du temps.
+              </span>
             </h1>
             <p className="lead">
               Je crée des sites web, des automatisations et des assistants IA

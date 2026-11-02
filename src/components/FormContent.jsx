@@ -224,6 +224,7 @@ export default function FormContent({
   const [startedAt, setStartedAt] = useState("");
   const formRef = useRef(null);
   const firstStepRef = useRef(null);
+  const secondStepRef = useRef(null);
   const valuesBeforeSubmit = useRef(null);
   const [state, formAction, pending] = useActionState(submitLead, {
     success: false,
@@ -251,6 +252,19 @@ export default function FormContent({
         value: control.value,
         checked: control.checked,
       }));
+  }
+
+  function handleSubmit(event) {
+    for (const control of secondStepRef.current.querySelectorAll(
+      "input, select, textarea",
+    )) {
+      if (!control.checkValidity()) {
+        event.preventDefault();
+        control.reportValidity();
+        return;
+      }
+    }
+    rememberValues(event);
   }
 
   function nextStep() {
@@ -300,7 +314,7 @@ export default function FormContent({
             <i className={step === 2 ? "active" : ""} />
           </div>
         </div>
-        <form ref={formRef} action={formAction} onSubmit={rememberValues}>
+        <form ref={formRef} action={formAction} onSubmit={handleSubmit} noValidate>
           <input
             type="hidden"
             name="submissionId"
@@ -380,7 +394,7 @@ export default function FormContent({
               </button>
             </div>
           </fieldset>
-          <fieldset hidden={step !== 2}>
+          <fieldset ref={secondStepRef} hidden={step !== 2}>
             <legend className="field-label" style={{ marginBottom: "1.3rem" }}>
               Comment vous recontacter ?
             </legend>
