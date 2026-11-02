@@ -70,7 +70,7 @@ export default function HermesPage() {
         title="Trois niveaux d'accompagnement. Un cadre sur mesure."
         actions={
           <>
-            <ActionLink href={contactHref("diagnostic-ia", "hermes-hero")}>
+            <ActionLink href="/diagnostic-ia">
               Demander mon diagnostic IA gratuit
             </ActionLink>
             <ActionLink

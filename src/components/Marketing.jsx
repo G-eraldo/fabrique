@@ -54,6 +54,10 @@ export function OfferGrid() {
             </span>
             <h3>{item.title}</h3>
             <p>{item.short}</p>
+            <div className="offer-example">
+              <span>Par exemple</span>
+              <p>{item.example}</p>
+            </div>
             <Link className="inline-link" href={item.href}>
               Découvrir l’offre <ArrowRight size={16} aria-hidden="true" />
             </Link>
@@ -121,7 +125,7 @@ export function CTABand({
       <h2 className="h2">{title}</h2>
       <p>{description}</p>
       <div className="btn-row">
-        <ActionLink href={contactHref("diagnostic-ia", source + "-diagnostic")}>
+        <ActionLink href="/diagnostic-ia">
           Diagnostic IA gratuit
         </ActionLink>
         <ActionLink

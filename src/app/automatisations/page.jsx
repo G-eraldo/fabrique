@@ -65,7 +65,7 @@ export default function AutomatisationsPage() {
         title="Libérez votre attention des tâches qui se répètent."
         actions={
           <>
-            <ActionLink href={contactHref("diagnostic-ia", "n8n-hero")}>
+            <ActionLink href="/diagnostic-ia">
               Demander mon diagnostic IA gratuit
             </ActionLink>
             <ActionLink

@@ -8,7 +8,6 @@ import {
   SectionIntro,
 } from "@/components/Marketing";
 import { pageMetadata } from "@/lib/seo";
-import { contactHref } from "@/lib/site";
 import { BrainCircuit, Hand, LockKeyhole, MessagesSquare } from "lucide-react";
 import Link from "next/link";
 
@@ -26,7 +25,7 @@ export default function AgentsIAPage() {
         title="Un assistant utile, avec des limites claires."
         actions={
           <>
-            <ActionLink href={contactHref("diagnostic-ia", "agents-ia-hero")}>
+            <ActionLink href="/diagnostic-ia">
               Demander mon diagnostic IA gratuit
             </ActionLink>
             <ActionLink href="/agents-ia/hermes" variant="outline">

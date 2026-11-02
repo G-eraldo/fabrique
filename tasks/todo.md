@@ -8,3 +8,12 @@
 - [ ] Vérifier build, lint, parcours, accès privé, SEO et rendu mobile ; terminer le test de bout en bout après configuration de l'URL PostgreSQL Supabase ou de la clé serveur.
 
 Décisions : conserver Next.js, JavaScript, les URL historiques et la marque ambre/ardoise. Utiliser le projet Supabase « suivi-calories » désigné par le propriétaire, avec tables `fabrique_*` isolées, RLS et Auth. Ne rien déployer.
+
+## Accueil : offres et parcours de conversion
+
+- [x] Illustrer les quatre offres par des exemples métier et aérer les cartes.
+- [x] Mettre en avant le contenu du diagnostic dès le hero et distinguer sa destination du contact projet.
+- [x] Ajouter un exemple interactif n8n / Hermes, identifié comme simulation.
+- [x] Vérifier les liens, l'interaction, le rendu ordinateur/mobile et le lint.
+
+Vérification : lint et build réussis. Navigation vers `/diagnostic-ia` et `/contact` testée ; trois étapes et retour au début de la simulation vérifiés. Rendu contrôlé à 1280 px et 375 px, sans débordement horizontal ; captures clients chargées. Aperçu de production local sur le port 3001, car celui du port 3000 conserve une ancienne feuille de style.

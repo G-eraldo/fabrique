@@ -350,6 +350,23 @@ img {
 .hero-note strong {
   color: var(--ink);
 }
+.hero-diagnostic-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  max-width: 510px;
+  margin: 1.25rem 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+.hero-diagnostic-note svg {
+  flex: none;
+  margin-top: 0.2rem;
+  color: #2f735e;
+}
+.hero-diagnostic-note strong {
+  color: var(--ink);
+}
 .hero-art {
   position: relative;
   border-radius: 38px;
@@ -537,6 +554,166 @@ img {
 .offer-card .inline-link {
   margin-top: auto;
   font-size: 0.88rem;
+}
+.offer-example {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.offer-example > span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--amber-deep);
+}
+.offer-example p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+.automation-demo {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  margin-top: 1.2rem;
+  padding: clamp(1.4rem, 3.5vw, 3rem);
+  border: 1px solid #c9d7cc;
+  border-radius: 26px;
+  background: #e7eee4;
+}
+.demo-intro .h3 {
+  margin: 1rem 0;
+  max-width: 350px;
+}
+.demo-intro > p,
+.demo-result > p {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+.demo-intro .demo-caption {
+  margin: 1.4rem 0 0;
+  font-size: 0.78rem;
+  color: #53645a;
+}
+.demo-player {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #c9d7cc;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 12px 30px #15272508;
+}
+.demo-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+.demo-controls button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 64px;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink-soft);
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.demo-controls button > span {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--amber-deep);
+}
+.demo-controls button:hover {
+  background: #f4f1e9;
+}
+.demo-controls button[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--white);
+}
+.demo-controls button[aria-pressed="true"] > span {
+  color: #f1bf7d;
+}
+.demo-result {
+  min-height: 380px;
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+}
+.demo-stage-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.demo-stage-heading .icon-box {
+  flex: none;
+  margin: 0;
+}
+.demo-stage-heading h4 {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+.demo-message,
+.demo-record {
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  font-size: 0.88rem;
+}
+.demo-label {
+  display: block;
+  font-size: 0.73rem;
+  font-weight: 750;
+  color: var(--muted);
+}
+.demo-message p {
+  margin: 0.7rem 0 0;
+}
+.demo-record dl {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+}
+.demo-record dl > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.3rem 1rem;
+}
+.demo-record dt {
+  color: var(--muted);
+}
+.demo-record dd {
+  margin: 0;
+  font-weight: 650;
+}
+.demo-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: #295c49;
+}
+.demo-notice svg {
+  flex: none;
+  margin-top: 0.15rem;
 }
 .split {
   display: grid;
@@ -1329,6 +1506,7 @@ img {
     margin-inline: auto;
   }
   .split,
+  .automation-demo,
   .form-shell,
   .admin-detail {
     grid-template-columns: 1fr;

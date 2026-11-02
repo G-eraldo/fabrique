@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import AutomationDemo from "@/components/AutomationDemo";
 import {
   ActionLink,
   CTABand,
@@ -62,7 +63,7 @@ export default function Home() {
               adaptés à votre entreprise, de la conception à l'accompagnement.
             </p>
             <div className="btn-row">
-              <ActionLink href={contactHref("diagnostic-ia", "accueil-hero")}>
+              <ActionLink href="/diagnostic-ia">
                 Diagnostic IA gratuit
               </ActionLink>
               <ActionLink
@@ -72,6 +73,13 @@ export default function Home() {
                 Parler de mon projet
               </ActionLink>
             </div>
+            <p className="hero-diagnostic-note">
+              <CheckCircle2 size={18} aria-hidden="true" />
+              <span>
+                <strong>20 à 30 minutes, sans engagement.</strong> Un échange sur
+                vos tâches et vos outils, puis des pistes concrètes par e-mail.
+              </span>
+            </p>
             <p className="hero-note">
               <strong>Un interlocuteur unique.</strong> Pour les indépendants,
               artisans, commerces, restaurants et PME.
@@ -257,12 +265,11 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <SectionIntro
-            eyebrow="Projets publiés"
-            title="Des réalisations que vous pouvez parcourir."
+            eyebrow="Sites web & automatisation"
+            title="Des sites à parcourir. Un exemple à explorer."
           >
-            Des sites clients accessibles en ligne. Les exemples
-            d'automatisation présentés ailleurs sur ce site sont identifiés
-            comme des démonstrations illustratives.
+            Découvrez deux sites clients publiés, puis explorez comment une
+            demande de devis pourrait être suivie et préparée avec n8n et Hermes.
           </SectionIntro>
           <div className="work-grid">
             <article className="work-card">
@@ -318,6 +325,7 @@ export default function Home() {
               </div>
             </article>
           </div>
+          <AutomationDemo />
           <div style={{ marginTop: "1.5rem" }}>
             <Link className="inline-link" href="/realisations">
               Toutes les réalisations et démonstrations{" "}
