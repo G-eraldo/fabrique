@@ -338,10 +338,6 @@ img {
   font-size: clamp(3rem, 5.4vw, 5.5rem);
   line-height: 1.04;
 }
-.hero-display-line {
-  display: block;
-  margin-top: 0.13em;
-}
 .hero-copy .lead {
   max-width: 620px;
   margin-bottom: 2rem;

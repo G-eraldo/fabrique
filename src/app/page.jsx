@@ -52,9 +52,8 @@ export default function Home() {
             </span>
             <h1 className="display">
               Un site qui inspire confiance.
-              <span className="text-amber hero-display-line">
-                Du temps pour votre métier.
-              </span>
+              <br />
+              <span className="text-amber">Du temps pour votre métier.</span>
             </h1>
             <p className="lead">
               Je crée des sites web, des automatisations et des assistants IA
