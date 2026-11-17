@@ -120,7 +120,6 @@ export async function submitLead(_previous, formData) {
   try {
     const requestHeaders = await headers();
     const rawIp =
-      requestHeaders.get("x-vercel-forwarded-for") ||
       requestHeaders.get("x-forwarded-for") ||
       "unknown";
     const ip = rawIp.split(",")[0].trim().slice(0, 100);

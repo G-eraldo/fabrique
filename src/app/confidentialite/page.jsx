@@ -51,7 +51,7 @@ export default function ConfidentialitePage() {
           <h2>Accès, sous-traitants et sécurité</h2>
           <p>
             Seul l'administrateur autorisé accède aux demandes dans le mini-CRM
-            privé. Le site utilise Vercel pour l'hébergement, Supabase pour le
+            privé. Le site utilise IONOS pour l'hébergement, Supabase pour le
             stockage et l'authentification, et peut utiliser Resend pour une
             notification interne par e-mail. Ces prestataires ont leurs propres
             infrastructures et conditions de traitement ; je ne garantis pas que

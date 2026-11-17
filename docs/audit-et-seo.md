@@ -4,7 +4,7 @@
 
 ## Dépôt et impacts
 
-Le dépôt utilisait Next.js 16, React 19, JavaScript, Tailwind CSS 4, Vercel Analytics et Resend. Les routes présentes étaient `/`, `/services`, `/portfolio`, `/a-propos`, `/contact` et `/mentions-legales`. Le formulaire envoyait seulement un e-mail ; il n'y avait ni stockage structuré, ni authentification, ni suivi de prospect. Le site était rendu côté serveur, avec métadonnées et sitemap, mais le parcours mobile, la preuve des réalisations et les données structurées demandaient une reprise. La CI existante exécute installation, audit npm, lint et build ; aucun déploiement n'a été effectué pendant cette refonte.
+Le dépôt utilisait Next.js 16, React 19, JavaScript, Tailwind CSS 4 et Resend. Les routes présentes étaient `/`, `/services`, `/portfolio`, `/a-propos`, `/contact` et `/mentions-legales`. Le formulaire envoyait seulement un e-mail ; il n'y avait ni stockage structuré, ni authentification, ni suivi de prospect. Le site était rendu côté serveur, avec métadonnées et sitemap, mais le parcours mobile, la preuve des réalisations et les données structurées demandaient une reprise. La CI existante exécute installation, audit npm, lint et build ; aucun déploiement n'a été effectué pendant cette refonte.
 
 Les URL existantes restent valides, sauf `/portfolio`, redirigée de manière permanente vers `/realisations`. `/services`, `/a-propos`, `/contact` et `/mentions-legales` gardent leur URL. Cette matrice doit être confrontée aux URL réellement indexées dans Search Console avant publication.
 
@@ -52,4 +52,4 @@ Les pages Amiens et Somme ont des contenus distincts. Aucune page Picardie ou Ha
 
 ## Mesure après publication
 
-Suivre les impressions, clics, requêtes et pages dans Search Console ; dans l'outil d'audience, suivre les pages d'entrée et les clics CTA si un événement conforme est configuré. Dans le CRM, comparer les soumissions par service et par source du CTA, puis qualifier les demandes par statut. Les URL `/admin` sont exclues de Vercel Analytics et les paramètres de requête sont retirés avant envoi. Aucun taux de conversion initial n'est disponible.
+Suivre les impressions, clics, requêtes et pages dans Search Console ; dans l'outil d'audience, suivre les pages d'entrée et les clics CTA si un événement conforme est configuré. Dans le CRM, comparer les soumissions par service et par source du CTA, puis qualifier les demandes par statut. Aucun taux de conversion initial n'est disponible.

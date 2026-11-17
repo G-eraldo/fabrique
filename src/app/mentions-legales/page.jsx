@@ -37,8 +37,8 @@ export default function MentionsLegalesPage() {
           </p>
           <h2>Hébergement</h2>
           <p>
-            Le site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut,
-            CA 91789, États-Unis. Les données du formulaire sont hébergées via
+            Le site est hébergé par IONOS SE, Elgendorfer Str. 57, 56410 Montabaur,
+            Allemagne. Les données du formulaire sont hébergées via
             Supabase. Les modalités exactes de traitement sont présentées dans
             la politique de confidentialité.
           </p>
