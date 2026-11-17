@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
-import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
 
 export const viewport = {
@@ -44,7 +43,6 @@ export default function RootLayout({ children }) {
         <main id="contenu">{children}</main>
         <Footer />
         <JsonLd />
-        <SiteAnalytics />
       </body>
     </html>
   );

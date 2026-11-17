@@ -73,10 +73,9 @@ export default function ConfidentialitePage() {
           </p>
           <h2>Mesure d'audience et cookies</h2>
           <p>
-            Le site utilise Vercel Web Analytics pour des statistiques de visite
-            agrégées. Selon la documentation de Vercel, ce service ne dépose pas
-            de cookie de mesure d'audience. Les cookies de connexion à l'espace
-            administrateur sont nécessaires à son fonctionnement et ne
+            Le site ne recourt à aucun service de mesure d'audience et ne dépose
+            pas de cookie de mesure d'audience. Les cookies de connexion à
+            l'espace administrateur sont nécessaires à son fonctionnement et ne
             concernent pas les visiteurs ordinaires.
           </p>
           <h2>Vos droits</h2>
