@@ -1,3 +1,5 @@
+const isDevelopment = process.env.NODE_ENV === "development";
+
 /** @type {import('next').NextConfig} */
 const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
@@ -5,6 +7,21 @@ const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
+  {
+    key: "Content-Security-Policy",
+    value: [
+      "default-src 'self'",
+      `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""}`,
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: https://res.cloudinary.com",
+      "connect-src 'self' https://*.supabase.co wss://*.supabase.co",
+      "font-src 'self' data:",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "object-src 'none'",
+    ].join("; "),
+  },
 ];
 
 const nextConfig = {
