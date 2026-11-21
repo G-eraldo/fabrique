@@ -105,6 +105,8 @@ img {
   letter-spacing: -0.055em;
   font-weight: 710;
   text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .h2 {
   font-size: clamp(2.05rem, 3.7vw, 3.65rem);
