@@ -35,6 +35,13 @@ const clients = [
       "https://res.cloudinary.com/dlnbsf2ed/image/upload/v1793636416/site_maison_jla_a0p4hr.jpg",
     url: "https://maisonjla.fr/",
   },
+  {
+    title: "Hypn’Odyssée Bien naître",
+    description:
+      "Le site de l’association présente ses ateliers parents-bébés et son accompagnement à l’allaitement à Rivery, près d’Amiens.",
+    image: "/hypnodyssee.webp",
+    url: "https://hypnodyssee.fr/",
+  },
 ];
 const demos = [
   {
@@ -103,7 +110,7 @@ export default function RealisationsPage() {
             eyebrow="Projets clients"
             title="Des sites que vous pouvez visiter."
           >
-            Trois projets présentés par La Fabrique du Code, avec leurs liens et
+            Quatre projets présentés par La Fabrique du Code, avec leurs liens et
             leurs captures.
           </SectionIntro>
           <div className="work-grid">
