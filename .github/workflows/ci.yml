@@ -16,5 +16,7 @@ jobs:
           node-version: '22'
           cache: 'npm'
       - run: npm ci
+      - name: Vérifier la compatibilité des plugins ESLint
+        run: npm ls eslint
       - run: npm run lint
       - run: npm run build
